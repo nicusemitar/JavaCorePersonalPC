@@ -1,14 +1,15 @@
 package practiceTaskOOP;
 
 // 1)
-class Square {
-    private double sideLength;
+class Square extends GraphicObject {
+    protected double sideLength;
 
     Square(double sideLength) {
         this.sideLength = sideLength;
     }
 
-    double area() {
+    @Override
+    public double area() {
         return sideLength * sideLength;
     }
 
@@ -17,15 +18,16 @@ class Square {
     }
 }
 
-// 2)
-class Circle {
+//2)
+class Circle extends GraphicObject {
     private double radius;
 
     Circle(double radius) {
         this.radius = radius;
     }
 
-    double area() {
+    @Override
+    public double area() {
         return Math.PI * radius * radius;
     }
 
@@ -34,7 +36,7 @@ class Circle {
     }
 }
 
-public class Thirst_and_Second_Task {
+public class ThirstAndSecondTask {
     public static void main(String[] args) {
 
         //1.
