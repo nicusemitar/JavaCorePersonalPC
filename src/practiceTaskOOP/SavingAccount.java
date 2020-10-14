@@ -12,19 +12,6 @@ class SavingsAccount {
         SavingsAccount.annualInterestRate = annualInterestRate;
     }
 
-    public double calculateMonthlyInterest() {
-        double mi = (savingsBalance * annualInterestRate) / 12.0;
-        return mi;
-    }
-
-    public double getSavingsBalance() {
-        return savingsBalance;
-    }
-
-    public void setSavingsBalance(double savingsBalance) {
-        this.savingsBalance = savingsBalance;
-    }
-
     public static void main(String[] args) {
         SavingsAccount saver1 = new SavingsAccount(2000.00);
         SavingsAccount saver2 = new SavingsAccount(3000.00);
@@ -53,5 +40,18 @@ class SavingsAccount {
         mi2 = saver2.calculateMonthlyInterest();
         saver2.setSavingsBalance(saver2.getSavingsBalance() + mi2);
         System.out.println("New value: " + saver2.getSavingsBalance());
+    }
+
+    public double calculateMonthlyInterest() {
+        double mi = (savingsBalance * annualInterestRate) / 12.0;
+        return mi;
+    }
+
+    public double getSavingsBalance() {
+        return savingsBalance;
+    }
+
+    public void setSavingsBalance(double savingsBalance) {
+        this.savingsBalance = savingsBalance;
     }
 }
